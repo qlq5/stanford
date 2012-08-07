@@ -52,14 +52,16 @@
     
     else if ([topOfStack isKindOfClass:[NSString class]]) {
         NSString *operation = topOfStack;
+        double b = [self popOperandOffStack:stack];
+        double a = [self popOperandOffStack:stack];
         if([operation isEqualToString:@"+"]) {
-            result = [self popOperandOffStack:stack] +  [self popOperandOffStack:stack];
+            result = a + b;
         } else if ([@"*" isEqualToString:operation]) {
-            result = [self popOperandOffStack:stack] * [self popOperandOffStack:stack]; 
+            result = a * b;
         }else if ([@"/" isEqualToString:operation]) {
-            result = [self popOperandOffStack:stack] / [self popOperandOffStack:stack];
+            result = a / b;
         }else if ([@"-" isEqualToString:operation]) {
-            result = [self popOperandOffStack:stack] - [self popOperandOffStack:stack];
+            result = a - b;
         }else if ([@"π" isEqualToString:operation]) {
             result = 3.14159265358979;
      }
