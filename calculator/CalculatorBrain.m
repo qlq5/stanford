@@ -64,8 +64,12 @@
             result = a - b;
         }else if ([@"π" isEqualToString:operation]) {
             result = 3.14159265358979;
+        }else if ([@"c" isEqualToString:operation]) {
+            [stack removeAllObjects];
+        }
+
+            
      }
-    }
     
     return result;
 }

@@ -26,13 +26,15 @@
 - (IBAction)digitPressed:(UIButton *)sender{
     NSString *digit = sender.currentTitle;
     if (self.userInMiddleOfEnteringNumber) {
-    } else {
-        self.display.text = digit;
-        self.userInMiddleOfEnteringNumber = YES;
-    }}
+        self.display.text = [self.display.text stringByAppendingString:digit];
+        } else {
+            self.display.text = digit;
+            self.userInMiddleOfEnteringNumber = YES;
+    }
+}
 - (IBAction)enterPressed {
     [self.brain pushOpperand:[self.display.text doubleValue]];
-    self.userInMiddleOfEnteringNumber =NO;
+    self.userInMiddleOfEnteringNumber = NO;
 }
 
 - (IBAction)OperationPressed:(id)sender {
