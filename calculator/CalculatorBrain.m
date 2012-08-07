@@ -66,6 +66,8 @@
             result = b * 3.14159265358979;
         }else if ([@"c" isEqualToString:operation]) {
             [stack removeAllObjects];
+        }else if ([@"√"isEqualToString:operation]){
+            result = sqrt(b);
         }
 
             
