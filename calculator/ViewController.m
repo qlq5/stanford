@@ -10,12 +10,14 @@
 #import "CalculatorBrain.h"
 @interface ViewController()
 @property (nonatomic) BOOL userInMiddleOfEnteringNumber;
+@property (nonatomic) BOOL Degree;
 @property (nonatomic, strong) CalculatorBrain *brain;
 @end
 @implementation ViewController
 
 @synthesize display =_display;
 @synthesize userInMiddleOfEnteringNumber=_userInMiddleOfEnteringNumber;
+@synthesize Degree=_Degree;
 @synthesize brain=_brain;
 
 -(CalculatorBrain *)brain{
@@ -32,6 +34,15 @@
             self.userInMiddleOfEnteringNumber = YES;
     }
 }
+-(IBAction)changeSeg{
+	if(Segment.selectedSegmentIndex == 0){
+        degree = 0;
+	}
+	if(Segment.selectedSegmentIndex == 1){
+        degree = 1;
+	}
+}
+
 - (IBAction)enterPressed {
     [self.brain pushOpperand:[self.display.text doubleValue]];
     self.userInMiddleOfEnteringNumber = NO;

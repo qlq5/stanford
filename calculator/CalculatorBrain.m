@@ -68,6 +68,12 @@
             [stack removeAllObjects];
         }else if ([@"√"isEqualToString:operation]){
             result = sqrt(b);
+        }else if ([@"sin"isEqualToString:operation]){
+            result = sin(b)*(180/M_PI);
+        }else if ([@"cos"isEqualToString:operation]){
+            result = cos(b);
+        }else if ([@"√"isEqualToString:operation]){
+            result = tan(b);
         }
 
             

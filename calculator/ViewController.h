@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+	IBOutlet UISegmentedControl *Segment;
+    int degree;
+}
+
+-(IBAction)changeSeg;
+
 @property (weak, nonatomic) IBOutlet UILabel *display;
+
 
 @end
