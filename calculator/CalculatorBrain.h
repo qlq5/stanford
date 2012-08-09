@@ -21,6 +21,7 @@
 
 -(double) runProgram: (id)program;
 
+ 
 +(NSString *)descriptionOfProgram: (id)program;
 
 @end
