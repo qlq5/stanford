@@ -17,11 +17,14 @@
 
 @synthesize display =_display;
 @synthesize userInMiddleOfEnteringNumber=_userInMiddleOfEnteringNumber;
+
 @synthesize brain=_brain;
+
 -(CalculatorBrain *)brain{
     if(!_brain) _brain = [[CalculatorBrain alloc]init];
     return _brain;
 }
+
 
 
 - (IBAction)digitPressed:(UIButton *)sender{
@@ -44,12 +47,14 @@
 
 
 
+
 -(IBAction)changeSeg{
 	if(segment.selectedSegmentIndex == 0){
         _brain.degree = NO;
 	}
 	if(segment.selectedSegmentIndex == 1){
         _brain.degree = YES;
+
 	}
 }
 

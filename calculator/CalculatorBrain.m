@@ -14,8 +14,10 @@
 @implementation CalculatorBrain
 
 @synthesize programStack=_programStack;
+
 @synthesize degree;
 @synthesize decimal;
+
 
 
 -(NSMutableArray *)programStack{
@@ -32,6 +34,7 @@
 {
     
     [self.programStack addObject:operation];
+    
     return [self runProgram:self.program];
 }
 
@@ -44,7 +47,9 @@
 +(NSString *)descriptionOfProgram:(id)program{
     return @"Implement this 2";
 }  
+
 -(double)popOperandOffStack: (NSMutableArray *) stack{
+
     double result = 0;
     id topOfStack = [stack lastObject];
     if (topOfStack) [stack removeLastObject];

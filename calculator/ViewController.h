@@ -7,10 +7,12 @@
 //
 
 
+
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController {
 	IBOutlet UISegmentedControl *segment;
+
 }
 
 -(IBAction)changeSeg;
