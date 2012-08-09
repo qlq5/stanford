@@ -22,6 +22,10 @@
 		D023088015D1B4A30003B4E5 /* calculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D023087F15D1B4A30003B4E5 /* calculatorTests.m */; };
 		D023088B15D1B96F0003B4E5 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = D023088915D1B96F0003B4E5 /* CalculatorBrain.m */; };
 		D023088C15D1B96F0003B4E5 /* CalculatorBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = D023088915D1B96F0003B4E5 /* CalculatorBrain.m */; };
+		D07DB45A15D471CB0060E3B9 /* calculator icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D07DB45915D471CB0060E3B9 /* calculator icon_1.png */; };
+		D07DB45C15D471FE0060E3B9 /* calculator iconhd.png in Resources */ = {isa = PBXBuildFile; fileRef = D07DB45B15D471FE0060E3B9 /* calculator iconhd.png */; };
+		D07DB45E15D472250060E3B9 /* calculator icon_1.png in Resources */ = {isa = PBXBuildFile; fileRef = D07DB45D15D472250060E3B9 /* calculator icon_1.png */; };
+		D07DB46015D4722B0060E3B9 /* calculator iconhd.png in Resources */ = {isa = PBXBuildFile; fileRef = D07DB45F15D4722B0060E3B9 /* calculator iconhd.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		D023087F15D1B4A30003B4E5 /* calculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = calculatorTests.m; sourceTree = "<group>"; };
 		D023088915D1B96F0003B4E5 /* CalculatorBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorBrain.m; sourceTree = "<group>"; };
 		D023088A15D1B96F0003B4E5 /* CalculatorBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalculatorBrain.h; sourceTree = "<group>"; };
+		D07DB45915D471CB0060E3B9 /* calculator icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculator icon_1.png"; sourceTree = "<group>"; };
+		D07DB45B15D471FE0060E3B9 /* calculator iconhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculator iconhd.png"; sourceTree = "<group>"; };
+		D07DB45D15D472250060E3B9 /* calculator icon_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculator icon_1.png"; sourceTree = "<group>"; };
+		D07DB45F15D4722B0060E3B9 /* calculator iconhd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculator iconhd.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +93,10 @@
 		D023084515D1B4A20003B4E5 = {
 			isa = PBXGroup;
 			children = (
+				D07DB45F15D4722B0060E3B9 /* calculator iconhd.png */,
+				D07DB45D15D472250060E3B9 /* calculator icon_1.png */,
+				D07DB45B15D471FE0060E3B9 /* calculator iconhd.png */,
+				D07DB45915D471CB0060E3B9 /* calculator icon_1.png */,
 				D023085A15D1B4A20003B4E5 /* calculator */,
 				D023087815D1B4A30003B4E5 /* calculatorTests */,
 				D023085315D1B4A20003B4E5 /* Frameworks */,
@@ -230,6 +242,10 @@
 			files = (
 				D023085F15D1B4A20003B4E5 /* InfoPlist.strings in Resources */,
 				D023086815D1B4A20003B4E5 /* MainStoryboard.storyboard in Resources */,
+				D07DB45A15D471CB0060E3B9 /* calculator icon_1.png in Resources */,
+				D07DB45C15D471FE0060E3B9 /* calculator iconhd.png in Resources */,
+				D07DB45E15D472250060E3B9 /* calculator icon_1.png in Resources */,
+				D07DB46015D4722B0060E3B9 /* calculator iconhd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +458,7 @@
 				D023088515D1B4A30003B4E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D023088615D1B4A30003B4E5 /* Build configuration list for PBXNativeTarget "calculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +467,7 @@
 				D023088815D1B4A30003B4E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

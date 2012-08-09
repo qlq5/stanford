@@ -65,6 +65,8 @@
             result = a + b;
         } else if ([@"x" isEqualToString:operation]) {
             result = a * b;
+        }else if ([@"n²" isEqualToString:operation]) {
+                result = b*b;
         }else if ([@"/" isEqualToString:operation]) {
             result = a / b;
         }else if ([@"-" isEqualToString:operation]) {
