@@ -16,6 +16,7 @@
 @implementation ViewController
 
 @synthesize display =_display;
+@synthesize history = _history;
 @synthesize userInMiddleOfEnteringNumber=_userInMiddleOfEnteringNumber;
 
 @synthesize brain=_brain;
@@ -35,13 +36,17 @@
         else if( self.brain.decimal == NO){
             _brain.decimal = YES;
             self.display.text = [self.display.text stringByAppendingString:digit];
+            self.history.text = [self.history.text stringByAppendingString:digit];
+
             return;
-                }}
+        }}
     if (self.userInMiddleOfEnteringNumber) {
         self.display.text = [self.display.text stringByAppendingString:digit];
-        } else {
-            self.display.text = digit;
-            self.userInMiddleOfEnteringNumber = YES;
+        self.history.text = [self.history.text stringByAppendingString:digit];
+    } else {
+        self.display.text = digit;
+        self.history.text = [self.history.text stringByAppendingString:digit];
+        self.userInMiddleOfEnteringNumber = YES;
     }
 }
 
@@ -54,9 +59,10 @@
 	}
 	if(segment.selectedSegmentIndex == 1){
         _brain.degree = YES;
-
+        
 	}
 }
+
 
 - (IBAction)enterPressed {
     [self.brain pushOpperand:[self.display.text doubleValue]];
@@ -69,9 +75,17 @@
     }
     NSString *operation = [sender currentTitle];
     double result = [self.brain preformOperation: operation];
+    self.history.text = [self.history.text stringByAppendingString:operation];
+    if ([operation isEqualToString:@"c"]) {
+        self.history.text = @"";
+    }
     self.display.text = [NSString stringWithFormat:@"%g", result];
 }
 
 
 
+- (void)viewDidUnload {
+    [self setHistory:nil];
+    [super viewDidUnload];
+}
 @end

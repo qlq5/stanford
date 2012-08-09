@@ -12,12 +12,13 @@
 
 @interface ViewController : UIViewController {
 	IBOutlet UISegmentedControl *segment;
-
+    
 }
 
 -(IBAction)changeSeg;
 
 @property (weak, nonatomic) IBOutlet UILabel *display;
+@property (weak, nonatomic) IBOutlet UILabel *history;
 
 
 @end

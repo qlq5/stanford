@@ -63,7 +63,7 @@
         double a = [self popOperandOffStack:stack];
         if([operation isEqualToString:@"+"]) {
             result = a + b;
-        } else if ([@"*" isEqualToString:operation]) {
+        } else if ([@"x" isEqualToString:operation]) {
             result = a * b;
         }else if ([@"/" isEqualToString:operation]) {
             result = a / b;
@@ -73,6 +73,8 @@
             result = b * 3.14159265358979;
         }else if ([@"c" isEqualToString:operation]) {
             [stack removeAllObjects];
+            
+    
             decimal = NO;
         }else if ([@"√"isEqualToString:operation]){
             result = sqrt(b);
