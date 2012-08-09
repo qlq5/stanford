@@ -14,7 +14,7 @@
 @property (nonatomic, strong) CalculatorBrain *brain;
 @end
 @implementation ViewController
-
+@synthesize operations =_operations;
 @synthesize display =_display;
 @synthesize history = _history;
 @synthesize userInMiddleOfEnteringNumber=_userInMiddleOfEnteringNumber;
@@ -67,19 +67,23 @@
 - (IBAction)enterPressed {
     [self.brain pushOpperand:[self.display.text doubleValue]];
     self.userInMiddleOfEnteringNumber = NO;
+    double result = [self.brain preformOperation: self.operations];
+    self.display.text = [NSString stringWithFormat:@"%g", result];
+
+
+    
 }
 
 - (IBAction)OperationPressed:(id)sender {
     if (self.userInMiddleOfEnteringNumber){
-        [self enterPressed];
+        [self.brain pushOpperand:[self.display.text doubleValue]];
+         self.userInMiddleOfEnteringNumber = NO;
     }
-    NSString *operation = [sender currentTitle];
-    double result = [self.brain preformOperation: operation];
-    self.history.text = [self.history.text stringByAppendingString:operation];
-    if ([operation isEqualToString:@"c"]) {
+    self.operations = [sender currentTitle];
+    self.history.text = [self.history.text stringByAppendingString:self.operations];
+    if ([self.operations isEqualToString:@"c"]) {
         self.history.text = @"";
     }
-    self.display.text = [NSString stringWithFormat:@"%g", result];
 }
 
 

@@ -19,6 +19,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *display;
 @property (weak, nonatomic) IBOutlet UILabel *history;
-
+@property NSString *operations;
 
 @end
